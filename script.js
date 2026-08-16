@@ -16,7 +16,7 @@
    YYYY-MM-DD
 */
 
-const honeymoonStartDate = "2026-07-01";
+const honeymoonStartDate = "2026-08-16";
 
 
 /*
