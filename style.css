@@ -2833,13 +2833,13 @@ body.cards-page footer {
 
     .cooldown-modal-title {
 
-        font-size: 36px;
+        font-size: 30px;
     }
 
 
     .cooldown-modal-content {
 
-        font-size: 20px;
+        font-size: 18px;
     }
 
 }
@@ -2873,9 +2873,9 @@ body.cards-page footer {
 
     .card {
 
-        width: 170px;
+        width: 238px;
 
-        height: 238px;
+        height: 333px;
     }
 
 
@@ -2933,9 +2933,9 @@ body.cards-page footer {
 
     .card {
 
-        width: 150px;
+        width: 238px;
 
-        height: 210px;
+        height: 333px;
     }
 
 
