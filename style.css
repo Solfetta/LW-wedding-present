@@ -1,0 +1,2957 @@
+/* =========================================================
+WEDDING GIFT — LITA & WILLIAM
+========================================================= */
+
+/* =========================================================
+1. RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+2. FONTS
+========================================================= */
+
+@import url(
+'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap'
+);
+
+/* =========================================================
+3. GENERAL
+========================================================= */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+
+            radial-gradient(
+                    ellipse 80% 45% at 50% -5%,
+                    rgba(255, 20, 147, 0.9) 0%,
+                    rgba(255, 20, 147, 0.48) 30%,
+                    rgba(255, 20, 147, 0.10) 58%,
+                    transparent 75%
+            ),
+
+            radial-gradient(
+                    ellipse 80% 45% at 50% 105%,
+                    rgba(255, 126, 0, 0.9) 0%,
+                    rgba(255, 126, 0, 0.48) 30%,
+                    rgba(255, 126, 0, 0.10) 58%,
+                    transparent 75%
+            ),
+
+            radial-gradient(
+                    ellipse 45% 75% at -5% 50%,
+                    rgba(126, 34, 255, 0.85) 0%,
+                    rgba(126, 34, 255, 0.45) 30%,
+                    rgba(126, 34, 255, 0.10) 58%,
+                    transparent 75%
+            ),
+
+            radial-gradient(
+                    ellipse 45% 75% at 105% 50%,
+                    rgba(255, 220, 0, 0.9) 0%,
+                    rgba(255, 220, 0, 0.45) 30%,
+                    rgba(255, 220, 0, 0.10) 58%,
+                    transparent 75%
+            ),
+
+            #ffffff;
+
+    color: #382438;
+
+    font-family:
+            'Montserrat',
+            sans-serif;
+
+    overflow-x: hidden;
+}
+
+/* =========================================================
+4. STARS
+========================================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    opacity: .7;
+
+    box-shadow:
+            0 0 5px rgba(255,255,255,.9),
+            0 0 12px rgba(255,255,255,.7);
+
+    animation:
+            twinkle 3s infinite ease-in-out;
+}
+
+/* ---------- Star positions ---------- */
+
+.star:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    left: 20%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(3) {
+    left: 35%;
+    top: 15%;
+    animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+    left: 50%;
+    top: 80%;
+    animation-delay: .5s;
+}
+
+.star:nth-child(5) {
+    left: 65%;
+    top: 25%;
+    animation-delay: 1.5s;
+}
+
+.star:nth-child(6) {
+    left: 78%;
+    top: 65%;
+    animation-delay: .3s;
+}
+
+.star:nth-child(7) {
+    left: 90%;
+    top: 15%;
+    animation-delay: 2.5s;
+}
+
+.star:nth-child(8) {
+    left: 85%;
+    top: 85%;
+    animation-delay: 1.2s;
+}
+
+@keyframes twinkle {
+
+    0%, 100% {
+        opacity: .25;
+
+        transform:
+                scale(.7)
+                rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+                scale(1.5)
+                rotate(45deg);
+    }
+}
+
+/* =========================================================
+5. START PAGE
+========================================================= */
+
+.page {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding:
+            70px 30px
+            60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* ---------- Small title ---------- */
+
+.small-title {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    opacity: .65;
+
+    margin-bottom: 20px;
+
+    animation:
+            fadeDown 1.2s ease forwards;
+}
+
+/* ---------- Main title ---------- */
+
+.page h1 {
+    width: 100%;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size:
+            clamp(55px, 9vw, 100px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    animation:
+            fadeDown 1.4s ease forwards;
+}
+
+.ampersand {
+    display: block;
+
+    font-size: .55em;
+
+    font-style: italic;
+
+    opacity: .7;
+
+    margin: 8px 0;
+}
+
+/* ---------- Greeting ---------- */
+
+.message {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin:
+            0 auto
+            45px;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+            fadeUp 1.4s ease .4s forwards;
+}
+
+/* =========================================================
+6. PLAYING CARD TUCK BOX
+BOX SIZE: 250 × 350 PX
+========================================================= */
+
+/* =========================================================
+GIFT WRAPPER
+========================================================= */
+
+.gift-wrapper {
+    position: relative;
+
+    /*
+       Контейнер больше коробки,
+       чтобы карты могли выезжать наружу.
+    */
+    width: 500px;
+    height: 550px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    animation:
+            fadeUp 1.4s ease .8s forwards,
+            floating 4s ease-in-out 2s infinite;
+}
+
+/* =========================================================
+MAIN SCENE
+========================================================= */
+
+.deck-box {
+    position: absolute;
+
+    /*
+       Центрируем коробку относительно gift-wrapper.
+    */
+    left: 50%;
+    top: 25%;
+
+    /*
+       ГЛАВНЫЙ РАЗМЕР КОРОБКИ
+       250 × 350
+    */
+    width: 250px;
+    height: 350px;
+
+    transform-style: preserve-3d;
+
+    /*
+       Коробка полностью ровная.
+    */
+    transform:
+            translateX(-50%);
+
+    transition:
+            transform .7s cubic-bezier(.2,.8,.2,1);
+
+    filter:
+            drop-shadow(
+                    0 25px 30px
+                    rgba(70,30,70,.18)
+            );
+}
+
+/* =========================================================
+BOX BODY
+========================================================= */
+
+.deck-box-body {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 250px;
+    height: 350px;
+
+    z-index: 10;
+}
+
+/* =========================================================
+FRONT
+========================================================= */
+
+.deck-box-front {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+            radial-gradient(
+                    circle at 20% 10%,
+                    rgba(255,255,255,.8),
+                    transparent 28%
+            ),
+
+            linear-gradient(
+                    145deg,
+                    #fff7fc,
+                    #ffe2f0
+            );
+
+    border:
+            2px solid
+            rgba(255,105,180,.45);
+
+    border-radius:
+            5px 6px 7px 5px;
+
+    box-shadow:
+
+            inset
+            10px 0 18px
+            rgba(255,255,255,.6),
+
+            inset
+            -10px 0 18px
+            rgba(190,70,130,.08);
+
+    color: #382438;
+
+    /*
+       Небольшой Z-offset сохраняем,
+       но БЕЗ перспективного наклона.
+    */
+    transform:
+            translateZ(15px);
+
+    overflow: hidden;
+
+    z-index: 20;
+}
+
+/* =========================================================
+DECORATIVE FRAME
+========================================================= */
+
+.deck-box-front::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border:
+            1px solid
+            rgba(255,105,180,.3);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+FRONT TEXT
+========================================================= */
+
+.deck-box-small {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    opacity: .55;
+
+    margin-bottom: 20px;
+}
+
+.deck-box-title {
+    position: relative;
+
+    z-index: 2;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 110px;
+
+    line-height: .7;
+
+    font-weight: 500;
+
+    opacity: .85;
+}
+
+.deck-box-subtitle {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 23px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    opacity: .6;
+}
+
+.deck-box-heart {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 24px;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 34px;
+
+    opacity: .55;
+}
+
+/* =========================================================
+SIDE
+========================================================= */
+
+.deck-box-side {
+    position: absolute;
+
+    top: 0;
+    right: -36px;
+
+    width: 36px;
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+            linear-gradient(
+                    90deg,
+                    #f4c5db,
+                    #e79abc
+            );
+
+    border-top:
+            2px solid
+            rgba(255,255,255,.4);
+
+    border-right:
+            2px solid
+            rgba(190,70,130,.25);
+
+    border-bottom:
+            2px solid
+            rgba(190,70,130,.25);
+
+    transform:
+            rotateY(90deg);
+
+    transform-origin:
+            left center;
+
+    color: #8e4270;
+
+    overflow: hidden;
+
+    z-index: 21;
+}
+
+.deck-box-side span {
+    writing-mode:
+            vertical-rl;
+
+    transform:
+            rotate(180deg);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    opacity: .7;
+}
+
+/* =========================================================
+CARDS INSIDE THE BOX
+========================================================= */
+
+.deck-inside {
+    opacity: 0;
+
+    position: absolute;
+
+    /*
+       Центрируем карты внутри коробки.
+    */
+    left: 17px;
+
+    bottom: 12px;
+
+    width: 216px;
+    height: 286px;
+
+    /*
+       Карты находятся ПОЗАДИ коробки.
+    */
+    z-index: 1;
+
+    transform:
+            translateZ(-2px)
+            translateY(150px);
+
+    pointer-events: none;
+
+    transition:
+            opacity .35s ease,
+            transform .75s
+            cubic-bezier(.2,.8,.2,1);
+}
+
+/* =========================================================
+INDIVIDUAL CARDS
+========================================================= */
+
+.inside-card {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 216px;
+    height: 286px;
+
+    border-radius: 8px;
+
+    box-shadow:
+            0 7px 16px
+            rgba(70,30,70,.15);
+}
+
+/* =========================================================
+CARD BACK
+========================================================= */
+.card-main::after {
+    content: "Начать новую историю";
+
+    position: absolute;
+    left: 50%;
+    top: 20%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #d94f91;
+    opacity: .75;
+
+    white-space: nowrap;
+
+    z-index: 10;
+}
+
+.inside-card-back {
+    background:
+
+            repeating-linear-gradient(
+                    45deg,
+                    rgba(255,255,255,.18) 0,
+                    rgba(255,255,255,.18) 2px,
+                    transparent 2px,
+                    transparent 8px
+            ),
+
+            linear-gradient(
+                    145deg,
+                    #ff8fc7,
+                    #d94f91
+            );
+
+    border:
+            2px solid
+            rgba(255,255,255,.55);
+}
+
+/* =========================================================
+MIDDLE CARD
+========================================================= */
+
+.inside-card-middle {
+    transform:
+            translateY(-7px)
+            rotate(1deg);
+
+    z-index: 2;
+}
+
+/* =========================================================
+FRONT CARD
+========================================================= */
+
+.inside-card-front {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+            linear-gradient(
+                    145deg,
+                    #fff9fc,
+                    #ffe7f2
+            );
+
+    border:
+            2px solid
+            rgba(255,105,180,.35);
+
+    color:
+            #d94f91;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size:
+            46px;
+
+    transform:
+            translateY(-12px);
+
+    z-index: 3;
+}
+
+/* =========================================================
+BEFORE HOVER — CARDS COMPLETELY HIDDEN
+========================================================= */
+
+.gift-wrapper:not(:hover) .deck-inside {
+    opacity: 0;
+
+    transform:
+            translateZ(-2px)
+            translateY(160px);
+}
+
+/* =========================================================
+HOVER — CARDS APPEAR
+========================================================= */
+
+.gift-wrapper:hover .deck-inside {
+    opacity: 1;
+
+    transform:
+            translateZ(-2px)
+            translateY(-145px);
+}
+
+/* =========================================================
+HOVER — BOX
+========================================================= */
+
+.gift-wrapper:hover .deck-box {
+    /*
+       ВАЖНО:
+       translateX(-50%) сохраняем,
+       иначе коробка снова уедет вправо.
+    */
+    transform:
+            translateX(-50%)
+            translateY(-10px)
+            scale(1.04);
+
+    filter:
+            drop-shadow(
+                    0 35px 42px
+                    rgba(70,30,70,.23)
+            );
+}
+
+/* =========================================================
+CARDS FAN OUT
+========================================================= */
+
+.gift-wrapper:hover .card-left {
+    transform:
+            translate(-22px, -4px)
+            rotate(-8deg);
+}
+
+.gift-wrapper:hover .card-right {
+    transform:
+            translate(22px, -4px)
+            rotate(8deg);
+}
+
+.gift-wrapper:hover .card-main {
+    transform:
+            translateY(-12px)
+            rotate(0deg);
+}
+
+/* =========================================================
+OPEN TEXT
+========================================================= */
+
+.open-text {
+    position: absolute;
+
+    bottom: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: .45;
+
+    transition:
+            opacity .3s,
+            transform .3s;
+}
+
+.gift-wrapper:hover .open-text {
+    opacity: 1;
+
+    transform:
+            translateY(3px);
+}
+
+/* =========================================================
+MOBILE — START PAGE
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .gift-wrapper {
+        transform:
+                scale(.9);
+    }
+
+    .gift-wrapper:hover {
+        transform:
+                scale(.9);
+    }
+}
+
+/* =========================================================
+7. CARDS PAGE
+========================================================= */
+
+body.cards-page {
+    padding:
+            55px 20px
+            60px;
+}
+
+/* =========================================================
+8. CARDS PAGE HEADER
+========================================================= */
+
+.cards-page-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.cards-header {
+    width: 100%;
+
+    margin:
+            0 auto
+            45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+/* ---------- Back link ---------- */
+
+.back {
+    display: inline-block;
+
+    color: #382438;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+
+    margin-bottom: 30px;
+
+    transition:
+            opacity .3s,
+            transform .3s;
+}
+
+.back:hover {
+    opacity: 1;
+
+    transform:
+            translateX(-3px);
+}
+
+/* ---------- Cards page title ---------- */
+
+.cards-header h1 {
+    width: 100%;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size:
+            clamp(45px, 7vw, 75px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-align: center;
+
+    margin:
+            0 0
+            12px;
+}
+
+.cards-header p {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    opacity: .55;
+}
+
+/* =========================================================
+9. PROGRESS BAR
+========================================================= */
+
+.progress-wrapper {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+            min(500px, 90%);
+
+    margin:
+            0 auto
+            50px;
+
+    text-align: center;
+}
+
+.progress-text {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 4px;
+
+    background:
+            rgba(56,36,56,.08);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    width: 0;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    #7e22ff,
+                    #ff1493,
+                    #ff7e00,
+                    #ffdc00
+            );
+
+    border-radius: 10px;
+
+    transition:
+            width 1s ease;
+}
+
+/* =========================================================
+   INSTRUCTION PANEL
+   ========================================================= */
+
+.instruction-section {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 90%);
+
+    margin:
+            -25px auto
+            45px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TOGGLE BUTTON
+   ========================================================= */
+
+.instruction-toggle {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+            12px
+            22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border:
+            1px solid
+            rgba(255,105,180,.25);
+
+    border-radius: 14px;
+
+    background:
+            rgba(255,255,255,.55);
+
+    color: #382438;
+
+    font-family:
+            'Montserrat',
+            sans-serif;
+
+    cursor: pointer;
+
+    backdrop-filter:
+            blur(10px);
+
+    box-shadow:
+            0 8px 20px
+            rgba(120,50,120,.07);
+
+    transition:
+            background .3s ease,
+            box-shadow .3s ease,
+            transform .3s ease,
+            border-color .3s ease;
+}
+
+
+/* ---------- Hover ---------- */
+
+.instruction-toggle:hover {
+
+    background:
+            rgba(255,255,255,.78);
+
+    border-color:
+            rgba(255,105,180,.45);
+
+    box-shadow:
+            0 12px 28px
+            rgba(120,50,120,.12);
+
+    transform:
+            translateY(-2px);
+}
+
+
+/* ---------- Active ---------- */
+
+.instruction-toggle:active {
+
+    transform:
+            translateY(0);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.instruction-icon {
+
+    font-size: 13px;
+
+    opacity: .55;
+
+    transition:
+            transform .4s ease;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.instruction-title {
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.instruction-arrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    font-size: 13px;
+
+    opacity: .45;
+
+    transition:
+            transform .4s ease,
+            opacity .3s ease;
+}
+
+
+/* =========================================================
+   OPEN STATE
+   ========================================================= */
+
+.instruction-toggle.open {
+
+    border-color:
+            rgba(255,105,180,.4);
+
+    background:
+            rgba(255,255,255,.72);
+
+    border-radius:
+            14px 14px 0 0;
+
+    box-shadow:
+            none;
+}
+
+
+.instruction-toggle.open .instruction-arrow {
+
+    transform:
+            rotate(180deg);
+
+    opacity: .8;
+}
+
+
+.instruction-toggle.open .instruction-icon {
+
+    transform:
+            rotate(45deg);
+}
+
+
+/* =========================================================
+   CONTENT WRAPPER
+   ========================================================= */
+
+.instruction-content {
+
+    display: grid;
+
+    grid-template-rows:
+        0fr;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    background:
+            rgba(255,255,255,.62);
+
+    border:
+            1px solid
+            rgba(255,105,180,.25);
+
+    border-top: 0;
+
+    border-radius:
+            0 0 14px 14px;
+
+    backdrop-filter:
+            blur(10px);
+
+    transition:
+            grid-template-rows .5s
+            cubic-bezier(.2,.8,.2,1),
+
+            opacity .35s ease;
+}
+
+
+/* =========================================================
+   OPEN CONTENT
+   ========================================================= */
+
+.instruction-content.open {
+
+    grid-template-rows:
+        1fr;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.instruction-inner {
+
+    min-height: 0;
+
+    padding:
+            10px
+            28px
+            22px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   INSTRUCTION ITEM
+   ========================================================= */
+
+.instruction-item {
+
+    display: grid;
+
+    grid-template-columns:
+        35px 1fr;
+
+    gap: 14px;
+
+    align-items: start;
+
+    padding:
+            15px
+            0;
+
+    border-bottom:
+            1px solid
+            rgba(56,36,56,.08);
+}
+
+
+.instruction-item:last-child {
+
+    border-bottom:
+            none;
+
+    padding-bottom:
+            5px;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.instruction-number {
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 16px;
+
+    opacity: .45;
+
+    padding-top: 1px;
+}
+
+
+/* =========================================================
+   ITEM TITLE
+   ========================================================= */
+
+.instruction-item strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ITEM TEXT
+   ========================================================= */
+
+.instruction-item p {
+
+    margin: 0;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    opacity: .6;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 780px) {
+
+    .instruction-section {
+
+        width:
+                min(92%, 650px);
+
+        margin:
+                -15px auto
+                35px;
+    }
+
+
+    .instruction-toggle {
+
+        min-height: 50px;
+
+        padding:
+                12px
+                18px;
+    }
+
+
+    .instruction-inner {
+
+        padding:
+                8px
+                20px
+                18px;
+    }
+
+
+    .instruction-item {
+
+        grid-template-columns:
+            28px 1fr;
+
+        gap: 10px;
+    }
+
+
+    .instruction-item strong {
+
+        font-size: 18px;
+    }
+
+
+    .instruction-item p {
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .instruction-section {
+
+        width:
+                calc(100% - 20px);
+
+        margin:
+                -10px auto
+                30px;
+    }
+
+
+    .instruction-title {
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .instruction-arrow {
+
+        right: 15px;
+    }
+
+
+    .instruction-inner {
+
+        padding:
+                6px
+                15px
+                15px;
+    }
+
+
+    .instruction-item {
+
+        grid-template-columns:
+            25px 1fr;
+
+        gap: 8px;
+
+        padding:
+                12px 0;
+    }
+
+
+    .instruction-number {
+
+        font-size: 14px;
+    }
+
+
+    .instruction-item strong {
+
+        font-size: 17px;
+    }
+
+
+    .instruction-item p {
+
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================================
+10. MAIN LAYOUT
+========================================================= */
+
+.cards-layout {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    margin: 0 auto;
+}
+
+/* =========================================================
+11. MAIN DECK
+========================================================= */
+
+.main-deck {
+    flex: 0 0 auto;
+
+    width: 810px;
+}
+
+/* =========================================================
+12. CARDS GRID — 3 × 7
+========================================================= */
+
+.cards-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 810px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 250px);
+
+    justify-content: center;
+
+    column-gap: 30px;
+
+    row-gap: 30px;
+}
+
+/* =========================================================
+13. MAIN CARD
+========================================================= */
+
+.card {
+    width: 250px;
+
+    height: 350px;
+
+    perspective: 1400px;
+
+    cursor: pointer;
+
+    animation:
+            cardAppear .7s ease both;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+            transform .8s
+            cubic-bezier(.2,.8,.2,1);
+}
+
+.card.opened .card-inner {
+    transform:
+            rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+14. CARD FRONT
+========================================================= */
+
+.card-front {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background:
+            rgba(255,255,255,.72);
+
+    border:
+            2px solid
+            rgba(255,105,180,.35);
+
+    box-shadow:
+
+            0 18px 35px
+            rgba(120,50,120,.12),
+
+            inset 0 0 30px
+            rgba(255,255,255,.7);
+
+    backdrop-filter:
+            blur(10px);
+
+    color: #382438;
+
+    transition:
+            transform .4s,
+            box-shadow .4s;
+}
+
+.card:not(.locked):hover .card-front {
+    transform:
+            translateY(-8px);
+
+    box-shadow:
+
+            0 28px 45px
+            rgba(120,50,120,.20),
+
+            inset 0 0 30px
+            rgba(255,255,255,.8);
+}
+
+/* ---------- Day number ---------- */
+
+.day-number {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 78px;
+
+    line-height: 1;
+
+    opacity: .8;
+
+    margin-bottom: 15px;
+}
+
+.day-label {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    opacity: .6;
+}
+
+.lock {
+    font-size: 23px;
+
+    margin-top: 20px;
+
+    opacity: .5;
+}
+
+/* =========================================================
+15. LOCKED CARDS
+========================================================= */
+
+.card.locked {
+    cursor: default;
+}
+
+.card.locked .card-front {
+    background:
+            rgba(255,255,255,.45);
+
+    border-color:
+            rgba(100,70,120,.12);
+
+    opacity: .65;
+
+    backdrop-filter:
+            blur(8px);
+}
+
+.card.locked .day-number {
+    opacity: .25;
+}
+
+.unlock-date {
+    margin-top: 12px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    opacity: .45;
+}
+
+/* =========================================================
+16. CARD BACK
+========================================================= */
+
+.card-back {
+    transform:
+            rotateY(180deg);
+
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(255,255,255,.97),
+                    rgba(255,245,250,.97)
+            );
+
+    color: #382438;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-align: center;
+
+    border:
+            2px solid
+            rgba(255,105,180,.35);
+
+    box-shadow:
+            0 25px 50px
+            rgba(120,50,120,.18);
+}
+
+.back-day {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    opacity: .5;
+}
+
+.card-title {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin:
+            15px 0;
+}
+
+.card-content {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+.card-symbol {
+    font-size: 22px;
+
+    opacity: .5;
+}
+
+/* =========================================================
+17. COOL DOWN SECTION
+========================================================= */
+
+.cooldown-section {
+    width: 230px;
+
+    flex: 0 0 230px;
+
+    padding-top: 25px;
+
+    text-align: center;
+}
+
+.cooldown-heading {
+    margin-bottom: 22px;
+}
+
+.cooldown-kicker {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .45;
+
+    margin-bottom: 5px;
+}
+
+.cooldown-heading h2 {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+}
+
+.cooldown-heading p {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    opacity: .55;
+}
+
+/* =========================================================
+18. COOL DOWN DECK
+========================================================= */
+
+.cooldown-deck {
+    position: relative;
+
+    display: block;
+
+    width: 190px;
+
+    height: 265px;
+
+    margin: 0 auto;
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+}
+
+.deck-card {
+    position: absolute;
+
+    width: 170px;
+
+    height: 245px;
+
+    left: 10px;
+
+    top: 10px;
+
+    border-radius: 12px;
+
+    box-shadow:
+            0 15px 30px
+            rgba(90,40,90,.18);
+
+    transition:
+            transform .5s
+            cubic-bezier(.2,.8,.2,1),
+            box-shadow .4s;
+}
+
+.deck-card-back {
+    background:
+            linear-gradient(
+                    135deg,
+                    #ff8fc7,
+                    #d94f91
+            );
+
+    border:
+            2px solid
+            rgba(255,255,255,.45);
+}
+
+.deck-card-one {
+    transform:
+            translate(-7px, 5px)
+            rotate(-6deg);
+
+    z-index: 1;
+}
+
+.deck-card-two {
+    transform:
+            translate(5px, 3px)
+            rotate(5deg);
+
+    z-index: 2;
+}
+
+.deck-card-three {
+    transform:
+            translate(0, 0)
+            rotate(-1deg);
+
+    z-index: 3;
+}
+
+.deck-card-top {
+    z-index: 4;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    background:
+
+            radial-gradient(
+                    circle at 20% 15%,
+                    rgba(255,255,255,.8),
+                    transparent 25%
+            ),
+
+            linear-gradient(
+                    145deg,
+                    #fff4fb,
+                    #ffe0ef
+            );
+
+    border:
+            2px solid
+            rgba(255,105,180,.4);
+
+    color: #382438;
+
+    box-shadow:
+            0 20px 40px
+            rgba(90,40,90,.22);
+}
+
+.deck-decoration {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 40px;
+
+    opacity: .65;
+}
+
+.deck-title {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 34px;
+
+    font-weight: 600;
+}
+
+.deck-subtitle {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+}
+
+.cooldown-deck:hover .deck-card-one {
+    transform:
+            translate(-14px, 8px)
+            rotate(-10deg);
+}
+
+.cooldown-deck:hover .deck-card-two {
+    transform:
+            translate(10px, 5px)
+            rotate(9deg);
+}
+
+.cooldown-deck:hover .deck-card-top {
+    transform:
+            translateY(-8px)
+            rotate(-1deg);
+
+    box-shadow:
+            0 28px 45px
+            rgba(90,40,90,.25);
+}
+
+.cooldown-deck.drawing .deck-card-top {
+    animation:
+            deckDraw .7s ease;
+}
+
+.cooldown-deck.drawing .deck-card-one {
+    animation:
+            deckShuffleLeft .7s ease;
+}
+
+.cooldown-deck.drawing .deck-card-two {
+    animation:
+            deckShuffleRight .7s ease;
+}
+
+.cooldown-hint {
+    margin-top: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .4;
+}
+
+/* =========================================================
+19. COOL DOWN MODAL
+========================================================= */
+
+.cooldown-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+            rgba(56,36,56,.22);
+
+    backdrop-filter:
+            blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+            opacity .35s ease,
+            visibility .35s ease;
+}
+
+.cooldown-overlay.visible {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+.cooldown-modal {
+    position: relative;
+
+    width: 350px;
+    height: 490px;
+
+    max-width: 90vw;
+    max-height: 85vh;
+
+    padding: 55px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+            radial-gradient(
+                    circle at 15% 10%,
+                    rgba(255,255,255,.9),
+                    transparent 28%
+            ),
+
+            linear-gradient(
+                    145deg,
+                    #fff8fc,
+                    #ffe8f3
+            );
+
+    border:
+            2px solid
+            rgba(255,105,180,.4);
+
+    border-radius: 16px;
+
+    box-shadow:
+            0 30px 70px
+            rgba(60,20,60,.25);
+
+    transform:
+            translateY(30px)
+            scale(.9)
+            rotate(-2deg);
+
+    transition:
+            transform .55s
+            cubic-bezier(.2,.8,.2,1);
+
+    box-sizing: border-box;
+}
+
+.cooldown-overlay.visible
+.cooldown-modal {
+    transform:
+            translateY(0)
+            scale(1)
+            rotate(0);
+}
+
+.cooldown-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #382438;
+
+    font-size: 28px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    opacity: .4;
+
+    transition:
+            opacity .3s,
+            transform .3s;
+}
+
+.cooldown-close:hover {
+    opacity: 1;
+
+    transform:
+            rotate(90deg);
+}
+
+.cooldown-modal-label {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: .45;
+
+    margin-bottom: 20px;
+}
+
+.cooldown-modal-title {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+.cooldown-modal-content {
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    max-width: 290px;
+}
+
+.cooldown-modal-symbol {
+    margin-top: 35px;
+
+    font-size: 22px;
+
+    opacity: .5;
+}
+
+/* =========================================================
+20. FOOTER
+========================================================= */
+
+body.cards-page footer {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-top: 55px;
+
+    font-family:
+            'Cormorant Garamond',
+            serif;
+
+    font-size: 17px;
+
+    opacity: .45;
+}
+
+/* =========================================================
+21. ANIMATIONS
+========================================================= */
+
+@keyframes floating {
+
+    0%, 100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-8px);
+    }
+}
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px)
+                scale(.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0)
+                scale(1);
+    }
+}
+
+/* =========================================================
+22. COOL DOWN ANIMATIONS
+========================================================= */
+
+@keyframes deckDraw {
+
+    0% {
+        transform:
+                translateY(0)
+                rotate(-1deg);
+    }
+
+    30% {
+        transform:
+                translateY(-25px)
+                rotate(4deg);
+    }
+
+    65% {
+        transform:
+                translateY(8px)
+                rotate(-3deg);
+    }
+
+    100% {
+        transform:
+                translateY(0)
+                rotate(-1deg);
+    }
+}
+
+@keyframes deckShuffleLeft {
+
+    0%, 100% {
+        transform:
+                translate(-7px, 5px)
+                rotate(-6deg);
+    }
+
+    50% {
+        transform:
+                translate(-20px, 12px)
+                rotate(-12deg);
+    }
+}
+
+@keyframes deckShuffleRight {
+
+    0%, 100% {
+        transform:
+                translate(5px, 3px)
+                rotate(5deg);
+    }
+
+    50% {
+        transform:
+                translate(15px, 8px)
+                rotate(11deg);
+    }
+}
+
+/* =========================================================
+23. CARD ANIMATION DELAYS
+========================================================= */
+
+.card:nth-child(1)  { animation-delay: .05s; }
+.card:nth-child(2)  { animation-delay: .10s; }
+.card:nth-child(3)  { animation-delay: .15s; }
+.card:nth-child(4)  { animation-delay: .20s; }
+.card:nth-child(5)  { animation-delay: .25s; }
+.card:nth-child(6)  { animation-delay: .30s; }
+.card:nth-child(7)  { animation-delay: .35s; }
+.card:nth-child(8)  { animation-delay: .40s; }
+.card:nth-child(9)  { animation-delay: .45s; }
+.card:nth-child(10) { animation-delay: .50s; }
+.card:nth-child(11) { animation-delay: .55s; }
+.card:nth-child(12) { animation-delay: .60s; }
+.card:nth-child(13) { animation-delay: .65s; }
+.card:nth-child(14) { animation-delay: .70s; }
+.card:nth-child(15) { animation-delay: .75s; }
+.card:nth-child(16) { animation-delay: .80s; }
+.card:nth-child(17) { animation-delay: .85s; }
+.card:nth-child(18) { animation-delay: .90s; }
+.card:nth-child(19) { animation-delay: .95s; }
+.card:nth-child(20) { animation-delay: 1s; }
+.card:nth-child(21) { animation-delay: 1.05s; }
+
+/* =========================================================
+   23. RESPONSIVE — LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+    /* =====================================================
+       MAIN LAYOUT
+       Cooldown переносится под основные карточки
+       ===================================================== */
+
+    .cards-layout {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 70px;
+    }
+
+
+    /* =====================================================
+       MAIN DECK
+       ===================================================== */
+
+    .main-deck {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    .cards-container {
+
+        width: 100%;
+
+        max-width: 620px;
+
+        grid-template-columns:
+            repeat(3, 250px);
+
+        justify-content: center;
+
+        column-gap: 30px;
+
+        row-gap: 28px;
+    }
+
+
+    /* =====================================================
+       COOL DOWN
+       ===================================================== */
+
+    .cooldown-section {
+
+        width: 100%;
+
+        flex: 0 0 auto;
+
+        padding-top: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .cooldown-heading {
+
+        margin-bottom: 22px;
+    }
+
+
+    .cooldown-deck {
+
+        /*
+           Размер самой стопки НЕ меняем.
+        */
+
+        width: 190px;
+
+        height: 265px;
+
+        margin: 0 auto;
+    }
+
+
+    /*
+       Карточки cooldown остаются
+       в соотношении 5 : 7
+    */
+
+    .deck-card {
+
+        width: 170px;
+
+        height: 238px;
+
+        left: 10px;
+
+        top: 10px;
+
+        border-radius: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   24. MOBILE
+   ========================================================= */
+
+@media (max-width: 780px) {
+
+    body.cards-page {
+
+        padding:
+                35px 15px
+                45px;
+    }
+
+
+    /* ---------- Header ---------- */
+
+    .cards-header {
+
+        margin-bottom: 35px;
+    }
+
+
+    .cards-header h1 {
+
+        font-size:
+                clamp(
+                        42px,
+                        13vw,
+                        65px
+                );
+    }
+
+
+    .cards-header p {
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       MAIN LAYOUT
+       ===================================================== */
+
+    .cards-layout {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 55px;
+    }
+
+
+    .main-deck {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       MAIN CARDS — 3 IN A ROW
+       ===================================================== */
+
+    .cards-container {
+
+        width: 100%;
+
+        max-width: 560px;
+
+        grid-template-columns:
+            repeat(3, 170px);
+
+        column-gap: 16px;
+
+        row-gap: 16px;
+
+        justify-content: center;
+    }
+
+
+    .card {
+
+        width: 170px;
+
+        height: 238px;
+    }
+
+
+    /* =====================================================
+       COOL DOWN
+       ===================================================== */
+
+    .cooldown-section {
+
+        width: 100%;
+
+        flex: 0 0 auto;
+
+        padding-top: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .cooldown-heading {
+
+        max-width: 330px;
+
+        margin:
+                0 auto
+                20px;
+
+        text-align: center;
+    }
+
+
+    .cooldown-deck {
+
+        width: 190px;
+
+        height: 265px;
+
+        margin: 0 auto;
+    }
+
+
+    /*
+       5 : 7
+       170 × 238
+    */
+
+    .deck-card {
+
+        width: 170px;
+
+        height: 238px;
+
+        left: 10px;
+
+        top: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   25. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .cards-container {
+
+        grid-template-columns:
+            repeat(1, 150px);
+
+        column-gap: 14px;
+
+        row-gap: 16px;
+
+        max-width: 320px;
+    }
+
+
+    .card {
+
+        width: 150px;
+
+        height: 210px;
+    }
+
+
+    .card-front {
+
+        padding: 12px;
+    }
+
+
+    .day-number {
+
+        font-size: 50px;
+    }
+
+
+    .card-back {
+
+        padding: 15px;
+    }
+
+
+    .card-title {
+
+        font-size: 20px;
+    }
+
+
+    .card-content {
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       COOL DOWN
+       Размер НЕ уменьшаем:
+       170 × 238 = 5 : 7
+       ===================================================== */
+
+    .cooldown-deck {
+
+        width: 190px;
+
+        height: 265px;
+    }
+
+
+    .deck-card {
+
+        width: 170px;
+
+        height: 238px;
+    }
+
+
+    .cooldown-modal {
+
+        min-height: 400px;
+
+        padding:
+                50px 30px
+                35px;
+    }
+
+
+    .cooldown-modal-title {
+
+        font-size: 36px;
+    }
+
+
+    .cooldown-modal-content {
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   26. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    /*
+       Основные карточки —
+       одна в ряд
+    */
+
+    .cards-container {
+
+        grid-template-columns:
+            1fr;
+
+        width: 100%;
+
+        max-width: 170px;
+
+        justify-items: center;
+
+        row-gap: 18px;
+    }
+
+
+    .card {
+
+        width: 170px;
+
+        height: 238px;
+    }
+
+
+    /*
+       Cooldown остаётся отдельным блоком
+       ВНИЗУ, после всех основных карточек
+    */
+
+    .cooldown-section {
+
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+
+    .cooldown-deck {
+
+        width: 190px;
+
+        height: 265px;
+    }
+
+
+    /*
+       Cooldown-карты:
+       строгое соотношение 5 : 7
+    */
+
+    .deck-card {
+
+        width: 170px;
+
+        height: 238px;
+
+        left: 10px;
+
+        top: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   27. EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .cards-container {
+
+        max-width: 150px;
+    }
+
+
+    .card {
+
+        width: 150px;
+
+        height: 210px;
+    }
+
+
+    /*
+       Cooldown всё ещё 5 : 7,
+       но теперь немного уменьшаем всю стопку,
+       чтобы она гарантированно помещалась.
+    */
+
+    .cooldown-deck {
+
+        transform: scale(.9);
+
+        transform-origin: top center;
+
+        margin-bottom: -25px;
+    }
+
+}

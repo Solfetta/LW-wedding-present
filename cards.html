@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Litha & William</title>
+
+    <link
+            rel="stylesheet"
+            href="style.css"
+    >
+</head>
+
+<body class="cards-page">
+
+<!-- =====================================================
+     STARS
+     ===================================================== -->
+
+<div class="stars" aria-hidden="true">
+
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+</div>
+
+
+<!-- =====================================================
+     PAGE
+     ===================================================== -->
+
+<main class="cards-page-content">
+
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
+    <header class="cards-header">
+
+        <a
+                href="index.html"
+                class="back"
+        >
+            ← В начало
+        </a>
+
+        <h1>
+            21 Days Together
+        </h1>
+
+        <p>
+            Одно маленькое приключение на каждый день
+            вашего медового месяца.
+        </p>
+
+    </header>
+
+
+    <!-- =================================================
+         PROGRESS
+         ================================================= -->
+
+    <section class="progress-wrapper">
+
+        <div class="progress-text">
+            <span id="openedCount">0</span>
+            из 21 карты разблокировано
+        </div>
+
+        <div class="progress-bar">
+            <div
+                    class="progress-fill"
+                    id="progressFill"
+            ></div>
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+    <!-- =================================================
+     INSTRUCTION
+     ================================================= -->
+
+    <section class="instruction-section">
+
+        <button
+                class="instruction-toggle"
+                id="instructionToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="instructionContent"
+        >
+            <span class="instruction-icon">✦</span>
+
+            <span class="instruction-title">
+            Как это работает?
+        </span>
+
+            <span class="instruction-arrow">
+            ↓
+        </span>
+        </button>
+
+
+        <div
+                class="instruction-content"
+                id="instructionContent"
+                aria-hidden="true"
+        >
+
+            <div class="instruction-inner">
+
+                <div class="instruction-item">
+
+                <span class="instruction-number">
+                    01
+                </span>
+
+                    <div>
+                        <strong>
+                            Как играть?
+                        </strong>
+
+                        <p>
+                            Карточки взывают к диалогу. Здесь поднимаются темы, которые часто висят в воздухе, создают лишние трения и вызывают ссоры.
+                            Мы за честный разговор в непринужденной обстановке. Игра сбавляет обороты серьёзности, добавляет веселья в процесс и делает вас ближе друг к другу.
+                            Открывайте новую карту — и вперёд обсуждать!
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="instruction-item">
+
+                <span class="instruction-number">
+                    02
+                </span>
+
+                    <div>
+                        <strong>
+                            По одной
+                        </strong>
+
+                        <p>
+                            Каждый день медового месяца
+                            будет открываться новая карта.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="instruction-item">
+
+                <span class="instruction-number">
+                    03
+                </span>
+
+                    <div>
+                        <strong>
+                            Если перегрелись...
+                        </strong>
+
+                        <p>
+                            Справа (или снизу) вас ждёт специальная
+                            колода «Остыть». Если разговор зашёл не туда, нажмите на неё,
+                            чтобы вытянуть случайную карту.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div class="cards-layout">
+
+        <!-- =============================================
+             MAIN 21 CARDS
+             ============================================= -->
+
+        <section
+                class="main-deck"
+                aria-label="21 honeymoon cards"
+        >
+
+            <div
+                    class="cards-container"
+                    id="cardsContainer"
+            ></div>
+
+        </section>
+
+
+        <!-- =============================================
+             COOL DOWN DECK
+             ============================================= -->
+
+        <aside class="cooldown-section">
+
+            <div class="cooldown-heading">
+
+                <div class="cooldown-kicker">
+                    На всякий пожарный
+                </div>
+
+                <h2>
+                    Остыть
+                </h2>
+
+                <p>
+                    Когда ваша любовь огонь, нужно вызывать пожарных.
+                </p>
+
+            </div>
+
+
+            <!-- CLICKABLE DECK -->
+
+            <button
+                    class="cooldown-deck"
+                    id="cooldownDeck"
+                    type="button"
+                    aria-label="Draw a random cool down card"
+            >
+
+                <span class="deck-card deck-card-back deck-card-one"></span>
+                <span class="deck-card deck-card-back deck-card-two"></span>
+                <span class="deck-card deck-card-back deck-card-three"></span>
+
+                <span class="deck-card deck-card-top">
+
+                        <span class="deck-decoration">
+                            ♡
+                        </span>
+
+                        <span class="deck-title">
+                        </span>
+
+                        <span class="deck-subtitle">
+                            Показать карту
+                        </span>
+
+                    </span>
+
+            </button>
+
+
+            <div class="cooldown-hint">
+                Тык по карте
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
+    <footer>
+        Made with love for Litha & William ♡
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     COOL DOWN MODAL
+     ===================================================== -->
+
+<div
+        class="cooldown-overlay"
+        id="cooldownOverlay"
+        aria-hidden="true"
+>
+
+    <div
+            class="cooldown-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cooldownModalTitle"
+    >
+
+        <button
+                class="cooldown-close"
+                id="cooldownClose"
+                type="button"
+                aria-label="Close card"
+        >
+            ×
+        </button>
+
+
+        <div class="cooldown-modal-label">
+            Остыть
+        </div>
+
+
+        <div
+                class="cooldown-modal-title"
+                id="cooldownModalTitle"
+        >
+            Устройте перерыв
+        </div>
+
+
+        <div
+                class="cooldown-modal-content"
+                id="cooldownModalContent"
+        >
+            Возьмите передышку вдвоём.
+        </div>
+
+
+        <div class="cooldown-modal-symbol">
+            ♡
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
