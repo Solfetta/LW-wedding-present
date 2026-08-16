@@ -314,7 +314,7 @@ function isCardUnlocked(dayNumber) {
 function formatDate(date) {
 
     return date.toLocaleDateString(
-        "en-US",
+        "ru-RU",
         {
             month: "long",
             day: "numeric"
@@ -485,7 +485,7 @@ function createCards() {
                     </div>
 
                     <div class="unlock-date">
-                        Opens ${formatDate(
+                        Откроется ${formatDate(
                     getUnlockDate(
                         cardData.day
                     )
